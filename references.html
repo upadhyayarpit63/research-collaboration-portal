@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References & Media - RPC Portal</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            position: relative;
+            background-color: #f8f9fa;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('bg.png'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.3; 
+            z-index: -1;
+        }
+        header, nav, main, section, footer {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        nav a.active {
+            color: #28a745;
+        }
+        .media-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .media-box {
+            flex: 1;
+            min-width: 280px;
+        }
+    </style> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header role="banner">
+        <h1>Research Collaboration Portal</h1>
+        <p>References and multimedia resources.</p>
+    </header>
+
+    <nav aria-label="Main Navigation">
+        <a href="index.html">Overview</a>
+        <a href="tasks.html">Task Board</a>
+        <a href="references.html" class="active">References & Media</a>
+        <a href="team.html">Team Members</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Academic Reference Links</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs - HTML Reference</a></li>
+                <li><a href="https://w3.org" target="_blank" rel="noopener">W3C Web Standards Guidelines</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Project Multimedia</h2>
+            <div class="media-container">
+                <div class="media-box">
+                    <h4>Audio Discussion Note</h4>
+                    <audio controls>
+                        <source src="sample-audio.mp3" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+                <div class="media-box">
+                    <h4>Video Demo</h4>
+                    <video width="100%" height="200" controls>
+                        <source src="sample-video.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Academic Team Collaboration Portal</p>
+    </footer>
+
+</body>
+</html>

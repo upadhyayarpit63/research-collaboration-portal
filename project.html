@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Fundamentals: Meta Tags -->
+    <meta name="description" content="Academic Research Project Collaboration Portal for student teams to manage tasks, references, and progress.">
+    <meta name="keywords" content="Research, Collaboration, Student Project, Academic Portal, Task Board">
+    <meta name="author" content="Student Researcher">
+    <title>Research Project Collaboration Portal</title>
+    
+    <style>
+        /* CSS Styling for Page Layout Structure */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            /* Background Image Properties */
+            background-image: url('C:\Users\Arpit Upadhyay\Downloads\Gemini_Generated_Image_ki83syki83syki83.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header, nav, main, section, article, aside, footer {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .media-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .media-box {
+            flex: 1;
+            min-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Semantic Header (Unit II) -->
+    <header role="banner">
+        <!-- SVG Graphic Integration (Unit I) -->
+        <svg width="60" height="60" style="float: left; margin-right: 15px;" aria-label="Portal Logo">
+            <circle cx="30" cy="30" r="28" fill="#0066cc" />
+            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20" font-weight="bold">RPC</text>
+        </svg>
+        <h1>Research Collaboration Portal</h1>
+        <p>A centralized platform for student research teams to manage tasks, references, and activity logs.</p>
+    </header>
+
+    <!-- Semantic Navigation Section (Unit I & II) -->
+    <nav aria-label="Main Navigation">
+        <a href="#overview">Overview</a>
+        <a href="#tasks">Task Board</a>
+        <a href="#form-section">Add Task</a>
+        <a href="#references">References & Media</a>
+        <a href="#team">Team Members</a>
+    </nav>
+
+    <!-- Semantic Main Content Wrapper (Unit II) -->
+    <main>
+
+        <!-- Section 1: Project Overview (Unit I: Formatting & Text) -->
+        <section id="overview" aria-labelledby="overview-heading">
+            <h2 id="overview-heading">Project Overview</h2>
+            <article>
+                <h3>Title: Automated Academic Workflow System</h3>
+                <p><strong>Department:</strong> Computer Science & Engineering</p>
+                <p><strong>Abstract:</strong> This research project focuses on creating simple web-based interfaces to help students track project milestones without complex JavaScript dependencies.</p>
+                <p><em>Current Status:</em> <strong>Active (Unit 1 & Unit 2 Implementation)</strong></p>
+            </article>
+        </section>
+
+        <!-- Section 2: Task Board (Unit II: Tables & Data Representation) -->
+        <section id="tasks" aria-labelledby="tasks-heading">
+            <h2 id="tasks-heading">Project Task Board</h2>
+            <p>Below is the current status of all team deliverables:</p>
+            
+            <table>
+                <caption>Academic Research Tasks Breakdown</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Task ID</th>
+                        <th scope="col">Task Description</th>
+                        <th scope="col">Assigned To</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TSK-01</td>
+                        <td>Requirement Gathering</td>
+                        <td>Rohan Sharma</td>
+                        <td>High</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>TSK-02</td>
+                        <td>HTML5 & Semantic Structure</td>
+                        <td>Priya Verma</td>
+                        <td>High</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>TSK-03</td>
+                        <td>Form Validation Setup</td>
+                        <td>Amit Kumar</td>
+                        <td>Medium</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 3: Forms & Form Validation (Unit II: Forms, Inputs, Validation) -->
+        <section id="form-section" aria-labelledby="form-heading">
+            <h2 id="form-heading">Create New Task (Form Controls & Validation)</h2>
+            <form action="#" method="post" aria-label="Add Task Form">
+                
+                <!-- Input Types & Attributes (Unit II) -->
+                <label for="task-title">Task Name (Required):</label>
+                <input type="text" id="task-title" name="task_title" required minlength="5" placeholder="Enter task title (min 5 chars)">
+
+                <label for="assignee">Assign Member:</label>
+                <select id="assignee" name="assignee" required>
+                    <option value="">-- Select Team Member --</option>
+                    <option value="rohan">Rohan Sharma</option>
+                    <option value="priya">Priya Verma</option>
+                    <option value="amit">Amit Kumar</option>
+                </select>
+
+                <label for="due-date">Target Deadline:</label>
+                <input type="date" id="due-date" name="due_date" required>
+
+                <label for="priority-level">Priority Level (Range 1-5):</label>
+                <input type="range" id="priority-level" name="priority" min="1" max="5">
+
+                <label for="task-desc">Task Instructions / Notes:</label>
+                <textarea id="task-desc" name="task_desc" rows="4" placeholder="Enter details..."></textarea>
+
+                <button type="submit">Add Task to Project</button>
+            </form>
+        </section>
+
+        <!-- Section 4: Multimedia & References (Unit I: Links, Multimedia, Audio, Video, Iframes) -->
+        <section id="references" aria-labelledby="ref-heading">
+            <h2 id="ref-heading">References & Multimedia Resources</h2>
+            
+            <!-- Hyperlinks & Lists (Unit I) -->
+            <h3>Academic Reference Links</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs - HTML Reference</a></li>
+                <li><a href="https://w3.org" target="_blank" rel="noopener">W3C Web Standards Guidelines</a></li>
+            </ul>
+
+            <!-- Audio, Video & Iframes (Unit I) -->
+            <h3>Project Presentation & Audio Notes</h3>
+            <div class="media-container">
+                
+                <div class="media-box">
+                    <h4>Audio Discussion Note</h4>
+                    <audio controls>
+                        <source src="sample-audio.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="media-box">
+                    <h4>Video Presentation Demo</h4>
+                    <video width="320" height="240" controls>
+                        <source src="sample-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="media-box">
+                    <h4>Embedded Reference (Iframe)</h4>
+                    <iframe src="https://example.com" title="External Document Preview" width="100%" height="200"></iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 5: Team Members & Sidebar (Unit I & II: Lists & Aside Element) -->
+        <aside aria-labelledby="team-heading">
+            <h2 id="team-heading">Project Team Directory</h2>
+            <ol>
+                <li><strong>Rohan Sharma</strong> - Project Lead (rohan@example.com)</li>
+                <li><strong>Priya Verma</strong> - Frontend Researcher (priya@example.com)</li>
+                <li><strong>Amit Kumar</strong> - Documentation Specialist (amit@example.com)</li>
+            </ol>
+        </aside>
+
+    </main>
+
+    <!-- Semantic Footer (Unit II) -->
+    <footer role="contentinfo">
+        <p>&copy; 2026 Academic Team Collaboration Portal | Designed strictly using HTML5 & Basic CSS Fundamentals</p>
+    </footer>
+
+</body>
+</html>
