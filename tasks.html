@@ -4,83 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Board - RPC Portal</title>
-    <!-- <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            position: relative;
-            background-color: #f8f9fa;
-        }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('bg.png'); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.3; 
-            z-index: -1;
-        }
-        header, nav, main, section, footer {
-            background-color: #ffffff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #0066cc;
-            font-weight: bold;
-        }
-        nav a.active {
-            color: #28a745;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        form label {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        input, select, textarea, button {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 15px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-    </style> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -104,6 +27,7 @@
                 <caption>Tasks Breakdown</caption>
                 <thead>
                     <tr>
+                        
                         <th scope="col">Task ID</th>
                         <th scope="col">Task Description</th>
                         <th scope="col">Assigned To</th>
@@ -111,6 +35,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tbody id="task-table-body">
                     <tr>
                         <td>TSK-01</td>
                         <td>Requirement Gathering</td>
@@ -134,10 +59,15 @@
                 <input type="text" id="task-title" name="task_title" required placeholder="Enter task title">
 
                 <label for="assignee">Assign Member:</label>
-                <select id="assignee" name="assignee" required>
-                    <option value="">-- Select Member --</option>
-                    <option value="rohan">Rohan Sharma</option>
-                    <option value="priya">Priya Verma</option>
+<select id="assignee" name="assignee" required>
+    <option value="">-- Select Member --</option>
+    <option value="abhishek">Abhishek Sharma</option>
+    <option value="rohit">Rohit Sharma</option>
+    <option value="">Harmanpreet Kaur</option>
+    <option value="amit">Narendra Modi</option>
+    <option value="virat">Virat Kohli</option>
+    <option value="shashank">Shashank Singh</option>
+</select>
                 </select>
 
                 <button type="submit">Add Task</button>
@@ -148,6 +78,37 @@
     <footer role="contentinfo">
         <p>&copy; 2026 Academic Team Collaboration Portal</p>
     </footer>
+    <script>
+    // Page load hone par saved tasks load karna
+    document.addEventListener("DOMContentLoaded", function() {
+        loadTasks();
+    });
+
+    // Form submit handle karna
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Page reload hone se rokega
+
+        // Inputs se value lena
+        const title = document.getElementById("task-title").value;
+        const assignee = document.getElementById("assignee").options[document.getElementById("assignee").selectedIndex].text;
+        const taskId = "TSK-0" + (document.querySelectorAll("#task-table-body tr").length + 1);
+
+        // Naya Row Table mein Add karna
+        const tableBody = document.getElementById("task-table-body");
+        const newRow = `
+            <tr>
+                <td>${taskId}</td>
+                <td>${title}</td>
+                <td>${assignee}</td>
+                <td>Pending</td>
+            </tr>
+        `;
+        tableBody.innerHTML += newRow;
+
+        // Form reset karna
+        document.querySelector("form").reset();
+    });
+</script>
 
 </body>
 </html>
