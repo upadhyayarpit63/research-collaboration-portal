@@ -121,7 +121,24 @@ button {
     margin-top: 15px;
 }
 
+ .registration-link {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
 button:hover {
+    background-color: #218838;
+}
+
+.registration-link:hover {
     background-color: #218838;
 }
 
