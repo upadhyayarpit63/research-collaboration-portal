@@ -6,7 +6,7 @@ body {
     padding: 20px;
     color: #333;
     position: relative;
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
 }
 body::before {
     content: "";
@@ -19,14 +19,31 @@ body::before {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.3; 
+    opacity: 0.05; 
     z-index: -1;
     transform: translateZ(0);
     will-change: transform;
 }
+
+.logout-button {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    padding: 8px 14px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+}
+
+.logout-button:hover {
+    background-color: #218838;
+}
+
 /* Header ko upar se rounded aur neeche se flat rakhein */
 header {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 20px;
     border-radius: 8px 8px 0 0;
     border: 1px solid #ddd;
@@ -37,7 +54,7 @@ header {
 
 /* Nav ko header ke bilkul sath mein jod dein */
 nav {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 15px 20px;
     border-radius: 0 0 8px 8px; /* Neeche se rounded */
     border: 1px solid #ddd;
@@ -45,7 +62,7 @@ nav {
 }
 
  main, section, article, footer {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
